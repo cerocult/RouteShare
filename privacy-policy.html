@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteShare - Política de Privacidad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background-color: #ffffff;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0071e3, #40a9ff);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: #424245;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .effective-date {
+            display: inline-block;
+            background: #f5f5f7;
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #6e6e73;
+            margin-bottom: 24px;
+        }
+
+        .highlight-box {
+            background: #f0f7ff;
+            border-left: 4px solid #0071e3;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            color: #1d1d1f;
+            margin-bottom: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e8e8ed;
+        }
+
+        th {
+            background: #f5f5f7;
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        td {
+            color: #424245;
+        }
+
+        .contact-box {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #86868b;
+            font-size: 0.85rem;
+            border-top: 1px solid #e8e8ed;
+        }
+
+        .lang-switch {
+            text-align: right;
+            padding: 12px 20px;
+            background: #f5f5f7;
+        }
+
+        .lang-switch a {
+            color: #0071e3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+
+        .section-en {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 40px 16px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <script>
+        function toggleLang() {
+            const es = document.querySelectorAll('.section-es');
+            const en = document.querySelectorAll('.section-en');
+            const btn = document.getElementById('lang-btn');
+
+            const isSpanish = es[0].style.display !== 'none';
+
+            es.forEach(el => el.style.display = isSpanish ? 'none' : 'block');
+            en.forEach(el => el.style.display = isSpanish ? 'block' : 'none');
+            btn.textContent = isSpanish ? 'Leer en Castellano' : 'Read in English';
+        }
+    </script>
+</head>
+<body>
+
+<div class="lang-switch">
+    <a href="#" id="lang-btn" onclick="toggleLang(); return false;">Read in English</a>
+</div>
+
+<div class="header">
+    <h1>RouteShare</h1>
+    <p class="section-es">Politica de Privacidad</p>
+    <p class="section-en" style="display:none;">Privacy Policy</p>
+</div>
+
+<div class="container">
+
+    <!-- ==================== SPANISH ==================== -->
+    <div class="section-es">
+
+    <span class="effective-date">Fecha de entrada en vigor: 11 de abril de 2026</span>
+
+    <p>En RouteShare nos tomamos tu privacidad en serio. Esta politica describe que informacion recopilamos, como la usamos y que derechos tienes sobre tus datos.</p>
+
+    <div class="highlight-box">
+        <p><strong>Resumen:</strong> Solo recopilamos los datos necesarios para que la app funcione. Tu ubicacion solo se comparte mientras una ruta esta activa. No vendemos tus datos a terceros.</p>
+    </div>
+
+    <h2>1. Informacion que recopilamos</h2>
+
+    <table>
+        <tr>
+            <th>Dato</th>
+            <th>Finalidad</th>
+            <th>Retencion</th>
+        </tr>
+        <tr>
+            <td>Nombre de usuario</td>
+            <td>Identificarte en las rutas compartidas</td>
+            <td>Mientras mantengas la cuenta</td>
+        </tr>
+        <tr>
+            <td>Correo electronico</td>
+            <td>Autenticacion (Apple/Google/Facebook)</td>
+            <td>Mientras mantengas la cuenta</td>
+        </tr>
+        <tr>
+            <td>Ubicacion en tiempo real</td>
+            <td>Compartir posicion con participantes de la ruta</td>
+            <td>Solo mientras la ruta esta activa</td>
+        </tr>
+        <tr>
+            <td>Foto de perfil (opcional)</td>
+            <td>Mostrar tu avatar en el mapa</td>
+            <td>Mientras mantengas la cuenta</td>
+        </tr>
+        <tr>
+            <td>Historial de rutas</td>
+            <td>Permitirte acceder a rutas anteriores</td>
+            <td>Hasta que elimines la ruta</td>
+        </tr>
+    </table>
+
+    <h2>2. Ubicacion</h2>
+    <p>RouteShare utiliza tu ubicacion <strong>exclusivamente</strong> para:</p>
+    <ul>
+        <li>Mostrar tu posicion a los demas participantes de una ruta activa.</li>
+        <li>Calcular la ruta y proporcionar indicaciones de navegacion.</li>
+        <li>Mostrar la distancia y direccion hacia otros participantes.</li>
+    </ul>
+    <p>Tu ubicacion <strong>no se comparte</strong> cuando:</p>
+    <ul>
+        <li>No tienes una ruta activa.</li>
+        <li>La hora de fin del seguimiento ha pasado.</li>
+        <li>Cierras la app y no tienes navegacion en segundo plano activa.</li>
+    </ul>
+    <p>La ubicacion se transmite cada 5 segundos mientras la ruta esta activa y se almacena unicamente como la ultima posicion conocida del participante (no se guarda un historial de trayecto).</p>
+
+    <h2>3. Servicios de terceros</h2>
+    <p>Utilizamos los siguientes servicios:</p>
+    <ul>
+        <li><strong>Supabase</strong> — Base de datos, autenticacion y actualizaciones en tiempo real. Los datos se almacenan en servidores seguros. <a href="https://supabase.com/privacy" target="_blank">Politica de privacidad de Supabase</a>.</li>
+        <li><strong>Apple MapKit</strong> — Calculo de rutas y visualizacion del mapa. Apple no recibe informacion personal identificable a traves de MapKit.</li>
+        <li><strong>Sign in with Apple / Google / Facebook</strong> — Autenticacion. Solo recibimos tu nombre y correo electronico; no accedemos a ningun otro dato de estas plataformas.</li>
+        <li><strong>RevenueCat</strong> — Gestion de suscripciones. <a href="https://www.revenuecat.com/privacy/" target="_blank">Politica de privacidad de RevenueCat</a>.</li>
+    </ul>
+
+    <h2>4. Comparticion de datos</h2>
+    <p><strong>No vendemos, alquilamos ni compartimos tus datos personales con terceros</strong> con fines publicitarios o de marketing.</p>
+    <p>Tus datos solo son visibles para:</p>
+    <ul>
+        <li>Los participantes de una ruta en la que te hayas unido voluntariamente.</li>
+        <li>Los proveedores de servicios mencionados en la seccion anterior, estrictamente para el funcionamiento de la app.</li>
+    </ul>
+
+    <h2>5. Seguridad</h2>
+    <p>Protegemos tus datos mediante:</p>
+    <ul>
+        <li>Conexiones cifradas (HTTPS/TLS) en todas las comunicaciones.</li>
+        <li>Autenticacion segura mediante tokens JWT.</li>
+        <li>Politicas de acceso a nivel de fila (Row Level Security) en la base de datos, que garantizan que solo puedas acceder a tus propios datos y a los de las rutas en las que participas.</li>
+    </ul>
+
+    <h2>6. Tus derechos</h2>
+    <p>Tienes derecho a:</p>
+    <ul>
+        <li><strong>Acceder</strong> a tus datos personales en cualquier momento desde la app.</li>
+        <li><strong>Rectificar</strong> tu nombre o foto de perfil.</li>
+        <li><strong>Eliminar</strong> tu cuenta y todos los datos asociados contactandonos por email.</li>
+        <li><strong>Dejar de compartir</strong> tu ubicacion simplemente finalizando la ruta activa.</li>
+    </ul>
+
+    <h2>7. Menores</h2>
+    <p>RouteShare no esta dirigida a menores de 13 anos. No recopilamos conscientemente datos de menores de esta edad. Si eres padre o tutor y crees que tu hijo nos ha proporcionado datos personales, contactanos para que los eliminemos.</p>
+
+    <h2>8. Cambios en esta politica</h2>
+    <p>Podemos actualizar esta politica periodicamente. Publicaremos cualquier cambio en esta pagina y actualizaremos la fecha de entrada en vigor. Si los cambios son significativos, te notificaremos a traves de la app.</p>
+
+    <div class="contact-box">
+        <h2>9. Contacto</h2>
+        <p>Si tienes preguntas sobre esta politica de privacidad o sobre tus datos, contactanos en:</p>
+        <p><strong>Email:</strong> privacy@routeshare.app</p>
+    </div>
+
+    </div>
+
+    <!-- ==================== ENGLISH ==================== -->
+    <div class="section-en">
+
+    <span class="effective-date">Effective date: April 11, 2026</span>
+
+    <p>At RouteShare, we take your privacy seriously. This policy describes what information we collect, how we use it, and what rights you have over your data.</p>
+
+    <div class="highlight-box">
+        <p><strong>Summary:</strong> We only collect the data necessary for the app to function. Your location is only shared while a route is active. We do not sell your data to third parties.</p>
+    </div>
+
+    <h2>1. Information we collect</h2>
+
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>Purpose</th>
+            <th>Retention</th>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td>Identify you in shared routes</td>
+            <td>While you maintain your account</td>
+        </tr>
+        <tr>
+            <td>Email address</td>
+            <td>Authentication (Apple/Google/Facebook)</td>
+            <td>While you maintain your account</td>
+        </tr>
+        <tr>
+            <td>Real-time location</td>
+            <td>Share your position with route participants</td>
+            <td>Only while the route is active</td>
+        </tr>
+        <tr>
+            <td>Profile photo (optional)</td>
+            <td>Display your avatar on the map</td>
+            <td>While you maintain your account</td>
+        </tr>
+        <tr>
+            <td>Route history</td>
+            <td>Allow you to access previous routes</td>
+            <td>Until you delete the route</td>
+        </tr>
+    </table>
+
+    <h2>2. Location</h2>
+    <p>RouteShare uses your location <strong>exclusively</strong> to:</p>
+    <ul>
+        <li>Show your position to other participants in an active route.</li>
+        <li>Calculate routes and provide navigation directions.</li>
+        <li>Show distance and direction to other participants.</li>
+    </ul>
+    <p>Your location is <strong>not shared</strong> when:</p>
+    <ul>
+        <li>You don't have an active route.</li>
+        <li>The tracking end time has passed.</li>
+        <li>You close the app without active background navigation.</li>
+    </ul>
+    <p>Location is transmitted every 5 seconds while a route is active and is stored only as the participant's last known position (no trajectory history is saved).</p>
+
+    <h2>3. Third-party services</h2>
+    <p>We use the following services:</p>
+    <ul>
+        <li><strong>Supabase</strong> — Database, authentication, and real-time updates. Data is stored on secure servers. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>.</li>
+        <li><strong>Apple MapKit</strong> — Route calculation and map display. Apple does not receive personally identifiable information through MapKit.</li>
+        <li><strong>Sign in with Apple / Google / Facebook</strong> — Authentication. We only receive your name and email; we do not access any other data from these platforms.</li>
+        <li><strong>RevenueCat</strong> — Subscription management. <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>4. Data sharing</h2>
+    <p><strong>We do not sell, rent, or share your personal data with third parties</strong> for advertising or marketing purposes.</p>
+    <p>Your data is only visible to:</p>
+    <ul>
+        <li>Participants of a route you have voluntarily joined.</li>
+        <li>The service providers mentioned in the previous section, strictly for app functionality.</li>
+    </ul>
+
+    <h2>5. Security</h2>
+    <p>We protect your data through:</p>
+    <ul>
+        <li>Encrypted connections (HTTPS/TLS) for all communications.</li>
+        <li>Secure authentication via JWT tokens.</li>
+        <li>Row Level Security policies in the database, ensuring you can only access your own data and data from routes you participate in.</li>
+    </ul>
+
+    <h2>6. Your rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+        <li><strong>Access</strong> your personal data at any time from the app.</li>
+        <li><strong>Rectify</strong> your name or profile photo.</li>
+        <li><strong>Delete</strong> your account and all associated data by contacting us via email.</li>
+        <li><strong>Stop sharing</strong> your location simply by ending the active route.</li>
+    </ul>
+
+    <h2>7. Children</h2>
+    <p>RouteShare is not intended for children under 13. We do not knowingly collect data from children under this age. If you are a parent or guardian and believe your child has provided us with personal data, please contact us so we can delete it.</p>
+
+    <h2>8. Changes to this policy</h2>
+    <p>We may update this policy periodically. We will post any changes on this page and update the effective date. If changes are significant, we will notify you through the app.</p>
+
+    <div class="contact-box">
+        <h2>9. Contact</h2>
+        <p>If you have questions about this privacy policy or your data, contact us at:</p>
+        <p><strong>Email:</strong> privacy@routeshare.app</p>
+    </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    &copy; 2026 RouteShare. All rights reserved.
+</div>
+
+</body>
+</html>
