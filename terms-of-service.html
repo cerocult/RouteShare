@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteShare - Condiciones del Servicio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #1d1d1f; background-color: #fff; }
+        .header { background: linear-gradient(135deg, #0071e3, #40a9ff); color: white; padding: 60px 20px; text-align: center; }
+        .header-icon { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+        h2 { font-size: 1.4rem; font-weight: 600; margin-top: 40px; margin-bottom: 12px; }
+        h3 { font-size: 1.1rem; font-weight: 600; margin-top: 24px; margin-bottom: 8px; }
+        p, li { font-size: 1rem; color: #424245; margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 6px; }
+        .effective-date { display: inline-block; background: #f5f5f7; padding: 6px 16px; border-radius: 8px; font-size: 0.9rem; color: #6e6e73; margin-bottom: 24px; }
+        .highlight-box { background: #f0f7ff; border-left: 4px solid #0071e3; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .highlight-box p { color: #1d1d1f; margin-bottom: 0; }
+        .contact-box { background: #f5f5f7; border-radius: 12px; padding: 24px; margin-top: 32px; }
+        .contact-box h2 { margin-top: 0; }
+        a { color: #0071e3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .footer { text-align: center; padding: 32px 20px; color: #86868b; font-size: 0.85rem; border-top: 1px solid #e8e8ed; }
+        .lang-switch { text-align: right; padding: 12px 20px; background: #f5f5f7; }
+        .lang-switch a { color: #0071e3; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .section-en { display: none; }
+        .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; }
+        @media (max-width: 600px) { .header { padding: 40px 16px; } .header h1 { font-size: 1.8rem; } .container { padding: 24px 16px 60px; } h2 { font-size: 1.2rem; } }
+    </style>
+    <script>
+        function toggleLang() {
+            const es = document.querySelectorAll('.section-es');
+            const en = document.querySelectorAll('.section-en');
+            const btn = document.getElementById('lang-btn');
+            const isSpanish = es[0].style.display !== 'none';
+            es.forEach(el => el.style.display = isSpanish ? 'none' : 'block');
+            en.forEach(el => el.style.display = isSpanish ? 'block' : 'none');
+            btn.textContent = isSpanish ? 'Leer en Castellano' : 'Read in English';
+        }
+    </script>
+</head>
+<body>
+
+<div class="lang-switch">
+    <a href="#" id="lang-btn" onclick="toggleLang(); return false;">Read in English</a>
+</div>
+
+<div class="header">
+    <img src="RouteShare.png" alt="RouteShare" class="header-icon">
+    <h1>RouteShare</h1>
+    <p class="section-es">Condiciones del Servicio</p>
+    <p class="section-en" style="display:none;">Terms of Service</p>
+</div>
+
+<div class="container">
+
+<!-- ==================== SPANISH ==================== -->
+<div class="section-es">
+
+<a href="index.html" class="back-link">&larr; Volver a la pagina principal</a>
+
+<span class="effective-date">Fecha de entrada en vigor: 11 de abril de 2026</span>
+
+<p>Estas condiciones regulan el uso de la aplicacion RouteShare. Al descargar, instalar o utilizar la aplicacion, aceptas estas condiciones en su totalidad.</p>
+
+<div class="highlight-box">
+    <p><strong>Resumen:</strong> Usa RouteShare de forma responsable. Respeta a los demas participantes. No uses la app mientras conduces de forma insegura.</p>
+</div>
+
+<h2>1. Descripcion del servicio</h2>
+<p>RouteShare es una aplicacion movil que permite a los usuarios crear rutas compartidas, visualizar la ubicacion de los participantes en tiempo real y recibir indicaciones de navegacion. El servicio incluye funciones gratuitas y funciones premium disponibles mediante suscripcion.</p>
+
+<h2>2. Requisitos de uso</h2>
+<ul>
+    <li>Debes tener al menos 13 anos para utilizar RouteShare.</li>
+    <li>Eres responsable de mantener la seguridad de tu cuenta.</li>
+    <li>Debes proporcionar informacion veraz al crear tu perfil.</li>
+    <li>Necesitas un dispositivo compatible con iOS 17 o superior.</li>
+</ul>
+
+<h2>3. Cuenta de usuario</h2>
+<p>Puedes utilizar RouteShare como invitado o creando una cuenta mediante Apple, Google o Facebook. Al crear una cuenta:</p>
+<ul>
+    <li>Eres responsable de toda la actividad que ocurra bajo tu cuenta.</li>
+    <li>Debes notificarnos inmediatamente si detectas un uso no autorizado.</li>
+    <li>Puedes eliminar tu cuenta en cualquier momento contactandonos por email.</li>
+</ul>
+
+<h2>4. Uso aceptable</h2>
+<p>Al usar RouteShare te comprometes a:</p>
+<ul>
+    <li>No utilizar la app de forma que ponga en peligro tu seguridad o la de otros (por ejemplo, manipular el telefono mientras conduces).</li>
+    <li>No compartir ubicaciones de terceros sin su consentimiento.</li>
+    <li>No intentar acceder a rutas o datos de otros usuarios de forma no autorizada.</li>
+    <li>No usar la app para acosar, rastrear o vigilar a otras personas sin su conocimiento.</li>
+    <li>No realizar ingenieria inversa, descompilar o modificar la aplicacion.</li>
+    <li>No utilizar la app con fines ilegales.</li>
+</ul>
+
+<h2>5. Ubicacion y seguridad vial</h2>
+<div class="highlight-box">
+    <p><strong>Importante:</strong> RouteShare es una herramienta de asistencia a la navegacion. El conductor es siempre el unico responsable de la conduccion segura del vehiculo. No manipules el dispositivo mientras conduces.</p>
+</div>
+<ul>
+    <li>Las indicaciones de navegacion son orientativas y pueden contener errores.</li>
+    <li>Respeta siempre las senales de trafico y la normativa de circulacion vigente.</li>
+    <li>RouteShare no se hace responsable de accidentes o infracciones derivadas del uso de la app.</li>
+</ul>
+
+<h2>6. Suscripciones y pagos</h2>
+<p>RouteShare ofrece funciones premium mediante suscripcion:</p>
+<ul>
+    <li>Las suscripciones se gestionan a traves de Apple (App Store).</li>
+    <li>El pago se carga a tu cuenta de Apple al confirmar la compra.</li>
+    <li>La suscripcion se renueva automaticamente a menos que la canceles al menos 24 horas antes del fin del periodo actual.</li>
+    <li>Puedes gestionar o cancelar tu suscripcion desde los Ajustes de tu dispositivo > Apple ID > Suscripciones.</li>
+    <li>No se ofrecen reembolsos por periodos parciales. Los reembolsos se gestionan exclusivamente a traves de Apple.</li>
+</ul>
+
+<h2>7. Propiedad intelectual</h2>
+<p>Todos los derechos sobre la aplicacion RouteShare, incluyendo su diseno, codigo, graficos y contenido, son propiedad de sus desarrolladores. No se concede ninguna licencia sobre estos derechos mas alla del uso personal de la aplicacion.</p>
+
+<h2>8. Disponibilidad del servicio</h2>
+<ul>
+    <li>Nos esforzamos por mantener el servicio disponible, pero no garantizamos un funcionamiento ininterrumpido.</li>
+    <li>Podemos realizar tareas de mantenimiento que impliquen interrupciones temporales.</li>
+    <li>Nos reservamos el derecho de modificar, suspender o discontinuar cualquier aspecto del servicio.</li>
+</ul>
+
+<h2>9. Limitacion de responsabilidad</h2>
+<p>RouteShare se proporciona "tal cual" y "segun disponibilidad". En la medida permitida por la ley:</p>
+<ul>
+    <li>No garantizamos la exactitud de las rutas, tiempos estimados o ubicaciones mostradas.</li>
+    <li>No somos responsables de danos directos, indirectos, incidentales o consecuentes derivados del uso de la app.</li>
+    <li>Nuestra responsabilidad total no excedera el importe pagado por el usuario en los ultimos 12 meses.</li>
+</ul>
+
+<h2>10. Terminacion</h2>
+<p>Podemos suspender o cancelar tu acceso a RouteShare si:</p>
+<ul>
+    <li>Incumples estas condiciones del servicio.</li>
+    <li>Utilizas la app de forma abusiva o fraudulenta.</li>
+    <li>Es necesario por motivos legales o de seguridad.</li>
+</ul>
+
+<h2>11. Legislacion aplicable</h2>
+<p>Estas condiciones se rigen por la legislacion espanola. Cualquier disputa se sometera a los tribunales de Madrid, Espana.</p>
+
+<h2>12. Cambios en las condiciones</h2>
+<p>Podemos modificar estas condiciones en cualquier momento. Los cambios se publicaran en esta pagina. El uso continuado de la app tras la publicacion de los cambios implica su aceptacion.</p>
+
+<div class="contact-box">
+    <h2>13. Contacto</h2>
+    <p>Si tienes preguntas sobre estas condiciones, contactanos en:</p>
+    <p><strong>Email:</strong> cerocult@gmail.com</p>
+    <p>Tambien puedes consultar nuestra <a href="privacy-policy.html">Politica de Privacidad</a>.</p>
+</div>
+
+</div>
+
+<!-- ==================== ENGLISH ==================== -->
+<div class="section-en">
+
+<a href="index.html" class="back-link">&larr; Back to home</a>
+
+<span class="effective-date">Effective date: April 11, 2026</span>
+
+<p>These terms govern the use of the RouteShare application. By downloading, installing, or using the application, you agree to these terms in full.</p>
+
+<div class="highlight-box">
+    <p><strong>Summary:</strong> Use RouteShare responsibly. Respect other participants. Do not use the app while driving unsafely.</p>
+</div>
+
+<h2>1. Service description</h2>
+<p>RouteShare is a mobile application that allows users to create shared routes, view participants' locations in real time, and receive navigation directions. The service includes free features and premium features available through subscription.</p>
+
+<h2>2. Requirements</h2>
+<ul>
+    <li>You must be at least 13 years old to use RouteShare.</li>
+    <li>You are responsible for maintaining the security of your account.</li>
+    <li>You must provide truthful information when creating your profile.</li>
+    <li>You need a device compatible with iOS 17 or later.</li>
+</ul>
+
+<h2>3. User account</h2>
+<p>You can use RouteShare as a guest or by creating an account through Apple, Google, or Facebook. By creating an account:</p>
+<ul>
+    <li>You are responsible for all activity that occurs under your account.</li>
+    <li>You must notify us immediately if you detect unauthorized use.</li>
+    <li>You can delete your account at any time by contacting us via email.</li>
+</ul>
+
+<h2>4. Acceptable use</h2>
+<p>By using RouteShare, you agree to:</p>
+<ul>
+    <li>Not use the app in a way that endangers your safety or that of others (e.g., handling your phone while driving).</li>
+    <li>Not share third-party locations without their consent.</li>
+    <li>Not attempt to access routes or data of other users in an unauthorized manner.</li>
+    <li>Not use the app to harass, track, or surveil others without their knowledge.</li>
+    <li>Not reverse engineer, decompile, or modify the application.</li>
+    <li>Not use the app for illegal purposes.</li>
+</ul>
+
+<h2>5. Location and road safety</h2>
+<div class="highlight-box">
+    <p><strong>Important:</strong> RouteShare is a navigation assistance tool. The driver is always solely responsible for safe operation of the vehicle. Do not handle your device while driving.</p>
+</div>
+<ul>
+    <li>Navigation directions are for guidance only and may contain errors.</li>
+    <li>Always obey traffic signs and current traffic regulations.</li>
+    <li>RouteShare is not responsible for accidents or violations resulting from use of the app.</li>
+</ul>
+
+<h2>6. Subscriptions and payments</h2>
+<p>RouteShare offers premium features through subscription:</p>
+<ul>
+    <li>Subscriptions are managed through Apple (App Store).</li>
+    <li>Payment is charged to your Apple account upon confirming the purchase.</li>
+    <li>Subscriptions renew automatically unless you cancel at least 24 hours before the end of the current period.</li>
+    <li>You can manage or cancel your subscription from your device Settings > Apple ID > Subscriptions.</li>
+    <li>No refunds are offered for partial periods. Refunds are handled exclusively through Apple.</li>
+</ul>
+
+<h2>7. Intellectual property</h2>
+<p>All rights to the RouteShare application, including its design, code, graphics, and content, are owned by its developers. No license to these rights is granted beyond personal use of the application.</p>
+
+<h2>8. Service availability</h2>
+<ul>
+    <li>We strive to keep the service available but do not guarantee uninterrupted operation.</li>
+    <li>We may perform maintenance that involves temporary interruptions.</li>
+    <li>We reserve the right to modify, suspend, or discontinue any aspect of the service.</li>
+</ul>
+
+<h2>9. Limitation of liability</h2>
+<p>RouteShare is provided "as is" and "as available." To the extent permitted by law:</p>
+<ul>
+    <li>We do not guarantee the accuracy of routes, estimated times, or displayed locations.</li>
+    <li>We are not liable for direct, indirect, incidental, or consequential damages arising from use of the app.</li>
+    <li>Our total liability shall not exceed the amount paid by the user in the last 12 months.</li>
+</ul>
+
+<h2>10. Termination</h2>
+<p>We may suspend or cancel your access to RouteShare if:</p>
+<ul>
+    <li>You breach these terms of service.</li>
+    <li>You use the app in an abusive or fraudulent manner.</li>
+    <li>It is necessary for legal or security reasons.</li>
+</ul>
+
+<h2>11. Governing law</h2>
+<p>These terms are governed by Spanish law. Any dispute shall be submitted to the courts of Madrid, Spain.</p>
+
+<h2>12. Changes to the terms</h2>
+<p>We may modify these terms at any time. Changes will be posted on this page. Continued use of the app after publication of changes implies acceptance.</p>
+
+<div class="contact-box">
+    <h2>13. Contact</h2>
+    <p>If you have questions about these terms, contact us at:</p>
+    <p><strong>Email:</strong> cerocult@gmail.com</p>
+    <p>You can also read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+    &copy; 2026 RouteShare. All rights reserved.
+</div>
+
+</body>
+</html>
