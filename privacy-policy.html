@@ -194,17 +194,31 @@
         }
     </style>
     <script>
-        function toggleLang() {
+        function setLang(lang) {
             const es = document.querySelectorAll('.section-es');
             const en = document.querySelectorAll('.section-en');
             const btn = document.getElementById('lang-btn');
-
-            const isSpanish = es[0].style.display !== 'none';
-
-            es.forEach(el => el.style.display = isSpanish ? 'none' : 'block');
-            en.forEach(el => el.style.display = isSpanish ? 'block' : 'none');
-            btn.textContent = isSpanish ? 'Leer en Castellano' : 'Read in English';
+            const showEnglish = lang === 'en';
+            es.forEach(el => el.style.display = showEnglish ? 'none' : 'block');
+            en.forEach(el => el.style.display = showEnglish ? 'block' : 'none');
+            if (btn) btn.textContent = showEnglish ? 'Leer en Castellano' : 'Read in English';
+            document.documentElement.lang = showEnglish ? 'en' : 'es';
         }
+
+        function toggleLang() {
+            const es = document.querySelectorAll('.section-es');
+            const isSpanish = es[0].style.display !== 'none';
+            setLang(isSpanish ? 'en' : 'es');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const fromQuery = params.get('lang');
+            const fromHash = (window.location.hash || '').replace('#', '').toLowerCase();
+            const browser = (navigator.language || 'es').toLowerCase().slice(0, 2);
+            const lang = (fromQuery || fromHash || browser) === 'en' ? 'en' : 'es';
+            setLang(lang);
+        });
     </script>
 </head>
 <body>
@@ -291,7 +305,6 @@
         <li><strong>Supabase</strong> — Base de datos, autenticacion y actualizaciones en tiempo real. Los datos se almacenan en servidores seguros. <a href="https://supabase.com/privacy" target="_blank">Politica de privacidad de Supabase</a>.</li>
         <li><strong>Apple MapKit</strong> — Calculo de rutas y visualizacion del mapa. Apple no recibe informacion personal identificable a traves de MapKit.</li>
         <li><strong>Sign in with Apple / Google / Facebook</strong> — Autenticacion. Solo recibimos tu nombre y correo electronico; no accedemos a ningun otro dato de estas plataformas.</li>
-        <li><strong>RevenueCat</strong> — Gestion de suscripciones. <a href="https://www.revenuecat.com/privacy/" target="_blank">Politica de privacidad de RevenueCat</a>.</li>
     </ul>
 
     <h2>4. Comparticion de datos</h2>
@@ -402,7 +415,6 @@
         <li><strong>Supabase</strong> — Database, authentication, and real-time updates. Data is stored on secure servers. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>.</li>
         <li><strong>Apple MapKit</strong> — Route calculation and map display. Apple does not receive personally identifiable information through MapKit.</li>
         <li><strong>Sign in with Apple / Google / Facebook</strong> — Authentication. We only receive your name and email; we do not access any other data from these platforms.</li>
-        <li><strong>RevenueCat</strong> — Subscription management. <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat Privacy Policy</a>.</li>
     </ul>
 
     <h2>4. Data sharing</h2>

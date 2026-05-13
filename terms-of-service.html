@@ -32,15 +32,31 @@
         @media (max-width: 600px) { .header { padding: 40px 16px; } .header h1 { font-size: 1.8rem; } .container { padding: 24px 16px 60px; } h2 { font-size: 1.2rem; } }
     </style>
     <script>
-        function toggleLang() {
+        function setLang(lang) {
             const es = document.querySelectorAll('.section-es');
             const en = document.querySelectorAll('.section-en');
             const btn = document.getElementById('lang-btn');
-            const isSpanish = es[0].style.display !== 'none';
-            es.forEach(el => el.style.display = isSpanish ? 'none' : 'block');
-            en.forEach(el => el.style.display = isSpanish ? 'block' : 'none');
-            btn.textContent = isSpanish ? 'Leer en Castellano' : 'Read in English';
+            const showEnglish = lang === 'en';
+            es.forEach(el => el.style.display = showEnglish ? 'none' : 'block');
+            en.forEach(el => el.style.display = showEnglish ? 'block' : 'none');
+            if (btn) btn.textContent = showEnglish ? 'Leer en Castellano' : 'Read in English';
+            document.documentElement.lang = showEnglish ? 'en' : 'es';
         }
+
+        function toggleLang() {
+            const es = document.querySelectorAll('.section-es');
+            const isSpanish = es[0].style.display !== 'none';
+            setLang(isSpanish ? 'en' : 'es');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const fromQuery = params.get('lang');
+            const fromHash = (window.location.hash || '').replace('#', '').toLowerCase();
+            const browser = (navigator.language || 'es').toLowerCase().slice(0, 2);
+            const lang = (fromQuery || fromHash || browser) === 'en' ? 'en' : 'es';
+            setLang(lang);
+        });
     </script>
 </head>
 <body>
