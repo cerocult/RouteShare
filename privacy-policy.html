@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RouteShare - Política de Privacidad</title>
+    <script>
+        (function () {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var fromQuery = (params.get('lang') || '').toLowerCase();
+                var fromHash = (window.location.hash || '').replace('#', '').toLowerCase();
+                var browser = (navigator.language || 'es').toLowerCase().slice(0, 2);
+                var lang = (fromQuery || fromHash || browser) === 'en' ? 'en' : 'es';
+                document.documentElement.lang = lang;
+                document.documentElement.setAttribute('data-lang', lang);
+            } catch (e) {
+                document.documentElement.setAttribute('data-lang', 'es');
+            }
+        })();
+    </script>
     <style>
         * {
             margin: 0;
@@ -162,9 +177,8 @@
             text-decoration: underline;
         }
 
-        .section-en {
-            display: none;
-        }
+        html[data-lang="en"] .section-es { display: none !important; }
+        html[data-lang="es"] .section-en { display: none !important; }
 
         .back-link {
             display: inline-block;
@@ -195,29 +209,22 @@
     </style>
     <script>
         function setLang(lang) {
-            const es = document.querySelectorAll('.section-es');
-            const en = document.querySelectorAll('.section-en');
-            const btn = document.getElementById('lang-btn');
-            const showEnglish = lang === 'en';
-            es.forEach(el => el.style.display = showEnglish ? 'none' : 'block');
-            en.forEach(el => el.style.display = showEnglish ? 'block' : 'none');
-            if (btn) btn.textContent = showEnglish ? 'Leer en Castellano' : 'Read in English';
+            var showEnglish = lang === 'en';
+            document.documentElement.setAttribute('data-lang', showEnglish ? 'en' : 'es');
             document.documentElement.lang = showEnglish ? 'en' : 'es';
+            var btn = document.getElementById('lang-btn');
+            if (btn) btn.textContent = showEnglish ? 'Leer en Castellano' : 'Read in English';
         }
 
         function toggleLang() {
-            const es = document.querySelectorAll('.section-es');
-            const isSpanish = es[0].style.display !== 'none';
-            setLang(isSpanish ? 'en' : 'es');
+            var current = document.documentElement.getAttribute('data-lang');
+            setLang(current === 'en' ? 'es' : 'en');
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            const params = new URLSearchParams(window.location.search);
-            const fromQuery = params.get('lang');
-            const fromHash = (window.location.hash || '').replace('#', '').toLowerCase();
-            const browser = (navigator.language || 'es').toLowerCase().slice(0, 2);
-            const lang = (fromQuery || fromHash || browser) === 'en' ? 'en' : 'es';
-            setLang(lang);
+            var btn = document.getElementById('lang-btn');
+            var current = document.documentElement.getAttribute('data-lang') || 'es';
+            if (btn) btn.textContent = current === 'en' ? 'Leer en Castellano' : 'Read in English';
         });
     </script>
 </head>
@@ -231,7 +238,7 @@
     <img src="RouteShare.png" alt="RouteShare" class="header-icon">
     <h1>RouteShare</h1>
     <p class="section-es">Politica de Privacidad</p>
-    <p class="section-en" style="display:none;">Privacy Policy</p>
+    <p class="section-en">Privacy Policy</p>
 </div>
 
 <div class="container">

@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RouteShare - Condiciones del Servicio</title>
+    <script>
+        (function () {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var fromQuery = (params.get('lang') || '').toLowerCase();
+                var fromHash = (window.location.hash || '').replace('#', '').toLowerCase();
+                var browser = (navigator.language || 'es').toLowerCase().slice(0, 2);
+                var lang = (fromQuery || fromHash || browser) === 'en' ? 'en' : 'es';
+                document.documentElement.lang = lang;
+                document.documentElement.setAttribute('data-lang', lang);
+            } catch (e) {
+                document.documentElement.setAttribute('data-lang', 'es');
+            }
+        })();
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #1d1d1f; background-color: #fff; }
@@ -27,35 +42,29 @@
         .footer { text-align: center; padding: 32px 20px; color: #86868b; font-size: 0.85rem; border-top: 1px solid #e8e8ed; }
         .lang-switch { text-align: right; padding: 12px 20px; background: #f5f5f7; }
         .lang-switch a { color: #0071e3; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
-        .section-en { display: none; }
+        html[data-lang="en"] .section-es { display: none !important; }
+        html[data-lang="es"] .section-en { display: none !important; }
         .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; }
         @media (max-width: 600px) { .header { padding: 40px 16px; } .header h1 { font-size: 1.8rem; } .container { padding: 24px 16px 60px; } h2 { font-size: 1.2rem; } }
     </style>
     <script>
         function setLang(lang) {
-            const es = document.querySelectorAll('.section-es');
-            const en = document.querySelectorAll('.section-en');
-            const btn = document.getElementById('lang-btn');
-            const showEnglish = lang === 'en';
-            es.forEach(el => el.style.display = showEnglish ? 'none' : 'block');
-            en.forEach(el => el.style.display = showEnglish ? 'block' : 'none');
-            if (btn) btn.textContent = showEnglish ? 'Leer en Castellano' : 'Read in English';
+            var showEnglish = lang === 'en';
+            document.documentElement.setAttribute('data-lang', showEnglish ? 'en' : 'es');
             document.documentElement.lang = showEnglish ? 'en' : 'es';
+            var btn = document.getElementById('lang-btn');
+            if (btn) btn.textContent = showEnglish ? 'Leer en Castellano' : 'Read in English';
         }
 
         function toggleLang() {
-            const es = document.querySelectorAll('.section-es');
-            const isSpanish = es[0].style.display !== 'none';
-            setLang(isSpanish ? 'en' : 'es');
+            var current = document.documentElement.getAttribute('data-lang');
+            setLang(current === 'en' ? 'es' : 'en');
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            const params = new URLSearchParams(window.location.search);
-            const fromQuery = params.get('lang');
-            const fromHash = (window.location.hash || '').replace('#', '').toLowerCase();
-            const browser = (navigator.language || 'es').toLowerCase().slice(0, 2);
-            const lang = (fromQuery || fromHash || browser) === 'en' ? 'en' : 'es';
-            setLang(lang);
+            var btn = document.getElementById('lang-btn');
+            var current = document.documentElement.getAttribute('data-lang') || 'es';
+            if (btn) btn.textContent = current === 'en' ? 'Leer en Castellano' : 'Read in English';
         });
     </script>
 </head>
@@ -69,7 +78,7 @@
     <img src="RouteShare.png" alt="RouteShare" class="header-icon">
     <h1>RouteShare</h1>
     <p class="section-es">Condiciones del Servicio</p>
-    <p class="section-en" style="display:none;">Terms of Service</p>
+    <p class="section-en">Terms of Service</p>
 </div>
 
 <div class="container">
